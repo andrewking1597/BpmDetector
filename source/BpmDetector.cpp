@@ -15,6 +15,13 @@ BpmDetector::BpmDetector(int samplesPerBlock, int blocksPerWindow)
 //=======================================================================
 //                        Getters & Setters
 //=======================================================================
+void BpmDetector::setAudio(std::vector<std::vector<float> > &audio)
+{
+    m_data = audio;
+    m_numSamples = m_data[0].size();
+    return;
+}
+
 void BpmDetector::setBlocksPerWindow(int blocksPerWindow) {
     m_blocksPerWindow = blocksPerWindow;
     m_samplesPerWindow = m_blocksPerWindow * m_samplesPerBlock;

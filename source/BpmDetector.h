@@ -24,6 +24,7 @@ public:
     BpmDetector(int samplesPerBlock=1024, int blocksPerWindow=40);
     //================================================================
     // Getters & Setters
+    void setAudio(std::vector<std::vector<float> > &audio);
     int getSamplesPerBlock();
     int getBlocksPerWindow();
     void setSamplesPerBlock(int samplesPerBlock);
