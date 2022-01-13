@@ -31,9 +31,6 @@ float BpmDetector::detectBpm(int minBpm, int maxBpm)
         window.startSample = window.startBlock * m_samplesPerBlock;
         window.endSample = window.endBlock * m_samplesPerBlock;
 
-        // get average block energy of this window
-        float avgEnergy = computeAvgBlockEnergy(window);
-
         for (int b = window.startBlock; b < window.endBlock; b++)
         {
             float e = computeBlockEnergy(b);

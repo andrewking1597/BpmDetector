@@ -18,7 +18,6 @@ typedef struct {
     int endSample;
     int startBlock;
     int endBlock;
-    int avgEnergy;
 } WindowSpecs;
 
 class BpmDetector {
@@ -99,9 +98,11 @@ private:
      * @see setAudio()
      */
     std::vector<std::vector<float> > m_data;
+
     int m_samplesPerBlock; /**< number of samples in each block */
     int m_blocksPerWindow; /**< number of blocks in each window */
     int m_numSamples; /**< number of samples in each channel of m_data */
+
     /**
      * number of samples in each window. This is easily calculated as m_samplesPerBlock * m_blocksPerWindow but
      * it's here for convenience.
