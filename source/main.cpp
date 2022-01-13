@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include "AudioFile.h"
+#include "BpmDetector.h"
 
 int main(int argc, char* argv[])
 {
@@ -17,6 +18,9 @@ int main(int argc, char* argv[])
     audio.load(filepath);
     // copy samples to 2d vector
     std::vector<std::vector<float> > mysamples = audio.samples;
+
+    // create BpmDetector object
+    BpmDetector detector;
 
     return 0;
 }
