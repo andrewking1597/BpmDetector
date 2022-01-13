@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 
     // construct AudioFile object and load song
     AudioFile<float> audio;
-    audio.load(filepath); //todo handle invalid filepath
+    audio.load(filepath);
     // copy samples to 2d vector
     std::vector<std::vector<float> > mysamples = audio.samples;
 
