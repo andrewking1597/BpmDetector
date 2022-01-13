@@ -12,6 +12,24 @@ BpmDetector::BpmDetector(int samplesPerBlock, int blocksPerWindow)
     m_numSamples = 0;
 }
 
+float BpmDetector::computeBlockEnergy(int blockNum)
+{
+    int blockStart = blockNum * m_samplesPerBlock;
+    int blockEnd = blockStart + m_samplesPerBlock;
+
+    float total = 0;
+    for (int i = blockStart; i < blockEnd; i++)
+    {
+        // sum the squares of left and right channels
+        float left = m_data[0][i]; //note this works!
+        float right = m_data[1][i]; //note this works!
+
+        total = total + left*left + right*right;
+    }
+
+    return total;
+}
+
 //=======================================================================
 //                        Getters & Setters
 //=======================================================================

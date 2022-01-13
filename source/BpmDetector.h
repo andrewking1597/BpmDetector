@@ -22,6 +22,7 @@ typedef struct {
 class BpmDetector {
 public:
     BpmDetector(int samplesPerBlock=1024, int blocksPerWindow=40);
+    float computeBlockEnergy(int blockNum);
     //================================================================
     // Getters & Setters
     void setAudio(std::vector<std::vector<float> > &audio);
