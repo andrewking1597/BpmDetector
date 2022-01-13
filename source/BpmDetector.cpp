@@ -12,6 +12,21 @@ BpmDetector::BpmDetector(int samplesPerBlock, int blocksPerWindow)
     m_numSamples = 0;
 }
 
+float BpmDetector::computeAvgBlockEnergy(WindowSpecs w)
+{
+    //* Compute the average energy of the blocks in the given window
+
+    int totalEnergy = 0;
+    for (int i = w.startBlock; i < w.endBlock; i++)
+    {
+        totalEnergy += computeBlockEnergy(i);
+    }
+
+    float avg = totalEnergy / (w.endBlock - w.startBlock);
+
+    return avg;
+}
+
 float BpmDetector::computeBlockEnergy(int blockNum)
 {
     int blockStart = blockNum * m_samplesPerBlock;
