@@ -11,3 +11,26 @@ BpmDetector::BpmDetector(int samplesPerBlock, int blocksPerWindow)
     m_samplesPerWindow = m_blocksPerWindow * m_samplesPerBlock;
     m_numSamples = 0;
 }
+
+//=======================================================================
+//                        Getters & Setters
+//=======================================================================
+void BpmDetector::setBlocksPerWindow(int blocksPerWindow) {
+    m_blocksPerWindow = blocksPerWindow;
+    m_samplesPerWindow = m_blocksPerWindow * m_samplesPerBlock;
+    return;
+}
+
+int BpmDetector::getBlocksPerWindow() {
+    return m_blocksPerWindow;
+}
+
+void BpmDetector::setSamplesPerBlock(int samplesPerBlock) {
+    m_samplesPerBlock = samplesPerBlock;
+    m_samplesPerWindow = m_blocksPerWindow * m_samplesPerBlock;
+    return;
+}
+
+int BpmDetector::getSamplesPerBlock() {
+    return m_samplesPerBlock;
+}

@@ -22,6 +22,12 @@ typedef struct {
 class BpmDetector {
 public:
     BpmDetector(int samplesPerBlock=1024, int blocksPerWindow=40);
+    //================================================================
+    // Getters & Setters
+    int getSamplesPerBlock();
+    int getBlocksPerWindow();
+    void setSamplesPerBlock(int samplesPerBlock);
+    void setBlocksPerWindow(int blocksPerWindow);
 private:
     std::vector<std::vector<float> > m_data;
     int m_samplesPerBlock;
