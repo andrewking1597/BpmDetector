@@ -12,6 +12,55 @@ BpmDetector::BpmDetector(int samplesPerBlock, int blocksPerWindow)
     m_numSamples = 0;
 }
 
+float BpmDetector::detectBpm(int minBpm, int maxBpm)
+{
+    // calculate total number of complete blocks and windows
+    int numBlocks = m_numSamples / m_samplesPerBlock;
+    int numWindows = numBlocks / m_blocksPerWindow;
+
+    int numBeatsDetected = 0;
+
+    // for each window
+    for (int w = 0; w < numWindows; w++)
+    {
+        // construct the WindowSpecs struct
+        WindowSpecs window;
+        window.id = w;
+        window.startBlock = m_blocksPerWindow * w;
+        window.endBlock = window.startBlock + m_blocksPerWindow;
+        window.startSample = window.startBlock * m_samplesPerBlock;
+        window.endSample = window.endBlock * m_samplesPerBlock;
+
+        // get average block energy of this window
+        float avgEnergy = computeAvgBlockEnergy(window);
+
+        for (int b = window.startBlock; b < window.endBlock; b++)
+        {
+            float e = computeBlockEnergy(b);
+            float threshold = computeThreshold(window);
+            if (e > threshold) {
+                //note there is a beat
+                numBeatsDetected++;
+            }
+        }
+    }
+
+    // calculate raw bpm
+    float seconds = m_numSamples / 44100;
+    float mins = seconds / 60;
+    float bpm = numBeatsDetected / mins;
+
+    // convert bpm to the specified range
+    while (bpm < minBpm) {
+        bpm *= 2;
+    }
+    while (bpm > maxBpm) {
+        bpm /= 2;
+    }
+
+    return bpm;
+}
+
 float BpmDetector::computeThreshold(WindowSpecs w)
 {
     // compute variance
