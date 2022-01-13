@@ -12,6 +12,24 @@ BpmDetector::BpmDetector(int samplesPerBlock, int blocksPerWindow)
     m_numSamples = 0;
 }
 
+float BpmDetector::computeThreshold(WindowSpecs w)
+{
+    // compute variance
+    float varSum = 0;
+    for (int i = w.startBlock; i < w.endBlock; i++)
+    {
+        float temp = computeAvgBlockEnergy(w) - computeBlockEnergy(i);
+        temp = temp*temp;
+        varSum += temp;
+    }
+
+    float variance = varSum / (w.endBlock - w.startBlock);
+    float c = -0.0000015 * variance + 1.5142857;
+    float thresh = c * computeAvgBlockEnergy(w);
+
+    return thresh;
+}
+
 float BpmDetector::computeAvgBlockEnergy(WindowSpecs w)
 {
     //* Compute the average energy of the blocks in the given window
