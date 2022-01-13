@@ -1,6 +1,8 @@
-//
-// Created by Andrew King on 1/13/22.
-//
+/**
+ * @file BpmDetector.h
+ * @author Andrew King
+ * @copyright Copyright (C) 2021 Andrew King
+ */
 
 #ifndef BPMDETECTOR_BPMDETECTOR_H
 #define BPMDETECTOR_BPMDETECTOR_H
@@ -21,11 +23,13 @@ typedef struct {
 
 class BpmDetector {
 public:
+    /**
+     * Constructor
+     * @param samplesPerBlock the block size to use (in samples)
+     * @param blocksPerWindow the window size to use (in blocks)
+     */
     BpmDetector(int samplesPerBlock=1024, int blocksPerWindow=40);
     float detectBpm(int minBpm=90, int maxBpm=180);
-    float computeThreshold(WindowSpecs w);
-    float computeAvgBlockEnergy(WindowSpecs w);
-    float computeBlockEnergy(int blockNum);
     //================================================================
     // Getters & Setters
     void setAudio(std::vector<std::vector<float> > &audio);
@@ -34,6 +38,9 @@ public:
     void setSamplesPerBlock(int samplesPerBlock);
     void setBlocksPerWindow(int blocksPerWindow);
 private:
+    float computeThreshold(WindowSpecs w);
+    float computeAvgBlockEnergy(WindowSpecs w);
+    float computeBlockEnergy(int blockNum);
     std::vector<std::vector<float> > m_data;
     int m_samplesPerBlock;
     int m_blocksPerWindow;
