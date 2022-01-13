@@ -5,9 +5,18 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "AudioFile.h"
 
-int main()
+int main(int argc, char* argv[])
 {
+    // get filepath from args
+    std::string filepath = argv[1];
+
+    // construct AudioFile object and load song
+    AudioFile<float> audio;
+    audio.load(filepath); //todo handle invalid filepath
+    // copy samples to 2d vector
+    std::vector<std::vector<float> > mysamples = audio.samples;
 
     return 0;
 }
