@@ -4,11 +4,10 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 int main()
 {
-    std::cout << "Hello World!" << std::endl;
-    std::cout << "goodbye" << std::endl;
 
     return 0;
 }
