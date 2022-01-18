@@ -72,18 +72,23 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a912f475dcd2f8f8da3dfb560a935f214"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bpm_detector.html#a912f475dcd2f8f8da3dfb560a935f214">BpmDetector</a> (int samplesPerBlock=1024, int blocksPerWindow=40)</td></tr>
+<tr class="memdesc:a912f475dcd2f8f8da3dfb560a935f214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_bpm_detector.html#a912f475dcd2f8f8da3dfb560a935f214">More...</a><br /></td></tr>
 <tr class="separator:a912f475dcd2f8f8da3dfb560a935f214"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96ff8a1ac29702d133d0f43bd3766be7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bpm_detector.html#a96ff8a1ac29702d133d0f43bd3766be7">detectBpm</a> (int minBpm=90, int maxBpm=180)</td></tr>
+<tr class="memdesc:a96ff8a1ac29702d133d0f43bd3766be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects the BPM of some audio data.  <a href="class_bpm_detector.html#a96ff8a1ac29702d133d0f43bd3766be7">More...</a><br /></td></tr>
 <tr class="separator:a96ff8a1ac29702d133d0f43bd3766be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7f3f429292f73728084b63db50dec90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bpm_detector.html#ad7f3f429292f73728084b63db50dec90">setAudio</a> (std::vector&lt; std::vector&lt; float &gt; &gt; &amp;audio)</td></tr>
+<tr class="memdesc:ad7f3f429292f73728084b63db50dec90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the audio whose BPM will be measured.  <a href="class_bpm_detector.html#ad7f3f429292f73728084b63db50dec90">More...</a><br /></td></tr>
 <tr class="separator:ad7f3f429292f73728084b63db50dec90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a413e604a3f4a5471753bafb55742b42e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bpm_detector.html#a413e604a3f4a5471753bafb55742b42e">getSamplesPerBlock</a> ()</td></tr>
 <tr class="separator:a413e604a3f4a5471753bafb55742b42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b7be62b9341f6a0d05a43109c0d8c12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bpm_detector.html#a6b7be62b9341f6a0d05a43109c0d8c12">getBlocksPerWindow</a> ()</td></tr>
 <tr class="separator:a6b7be62b9341f6a0d05a43109c0d8c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02ab4c00cc40f419eb9f953f16463ffc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bpm_detector.html#a02ab4c00cc40f419eb9f953f16463ffc">setSamplesPerBlock</a> (int samplesPerBlock)</td></tr>
+<tr class="memdesc:a02ab4c00cc40f419eb9f953f16463ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of samples that make up a block.  <a href="class_bpm_detector.html#a02ab4c00cc40f419eb9f953f16463ffc">More...</a><br /></td></tr>
 <tr class="separator:a02ab4c00cc40f419eb9f953f16463ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fbc3d8affa536b842d468a5373c53c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bpm_detector.html#a3fbc3d8affa536b842d468a5373c53c6">setBlocksPerWindow</a> (int blocksPerWindow)</td></tr>
+<tr class="memdesc:a3fbc3d8affa536b842d468a5373c53c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of blocks that make up a window.  <a href="class_bpm_detector.html#a3fbc3d8affa536b842d468a5373c53c6">More...</a><br /></td></tr>
 <tr class="separator:a3fbc3d8affa536b842d468a5373c53c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -112,7 +117,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Constructor </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">samplesPerBlock</td><td>the block size to use (in samples) </td></tr>
     <tr><td class="paramname">blocksPerWindow</td><td>the window size to use (in blocks) </td></tr>
@@ -148,7 +155,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Detects the BPM of some audio data. Must first set the audio data by calling <a class="el" href="class_bpm_detector.html#ad7f3f429292f73728084b63db50dec90">setAudio()</a>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bpm_detector.html#ad7f3f429292f73728084b63db50dec90">setAudio()</a> </dd></dl>
+
+<p>Detects the BPM of some audio data. </p>
+<p >Must first set the audio data by calling <a class="el" href="class_bpm_detector.html#ad7f3f429292f73728084b63db50dec90" title="Sets the audio whose BPM will be measured.">setAudio()</a>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bpm_detector.html#ad7f3f429292f73728084b63db50dec90" title="Sets the audio whose BPM will be measured.">setAudio()</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">minBpm</td><td>the minimum acceptable BPM value </td></tr>
@@ -211,7 +220,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Sets the audio whose BPM will be measured. This MUST be called before calling <a class="el" href="class_bpm_detector.html#a96ff8a1ac29702d133d0f43bd3766be7">detectBpm()</a> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bpm_detector.html#a96ff8a1ac29702d133d0f43bd3766be7">detectBpm()</a> </dd></dl>
+
+<p>Sets the audio whose BPM will be measured. </p>
+<p >This MUST be called before calling <a class="el" href="class_bpm_detector.html#a96ff8a1ac29702d133d0f43bd3766be7" title="Detects the BPM of some audio data.">detectBpm()</a> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_bpm_detector.html#a96ff8a1ac29702d133d0f43bd3766be7" title="Detects the BPM of some audio data.">detectBpm()</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">audio</td><td>reference to the audio data </td></tr>
@@ -236,7 +247,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Sets the number of blocks that make up a window </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Sets the number of blocks that make up a window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">blocksPerWindow</td><td></td></tr>
   </table>
@@ -260,7 +273,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Sets the number of samples that make up a block </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Sets the number of samples that make up a block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">samplesPerBlock</td><td></td></tr>
   </table>
