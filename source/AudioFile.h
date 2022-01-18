@@ -79,35 +79,35 @@ public:
 
     //=============================================================
     /** Loads an audio file from a given file path.
-     * @Returns true if the file was successfully loaded
+     * @returns true if the file was successfully loaded
      */
     bool load (std::string filePath);
 
     /** Saves an audio file to a given file path.
-     * @Returns true if the file was successfully saved
+     * @returns true if the file was successfully saved
      */
     bool save (std::string filePath, AudioFileFormat format = AudioFileFormat::Wave);
 
     //=============================================================
-    /** @Returns the sample rate */
+    /** @returns the sample rate */
     uint32_t getSampleRate() const;
 
-    /** @Returns the number of audio channels in the buffer */
+    /** @returns the number of audio channels in the buffer */
     int getNumChannels() const;
 
-    /** @Returns true if the audio file is mono */
+    /** @returns true if the audio file is mono */
     bool isMono() const;
 
-    /** @Returns true if the audio file is stereo */
+    /** @returns true if the audio file is stereo */
     bool isStereo() const;
 
-    /** @Returns the bit depth of each sample */
+    /** @returns the bit depth of each sample */
     int getBitDepth() const;
 
-    /** @Returns the number of samples per channel */
+    /** @returns the number of samples per channel */
     int getNumSamplesPerChannel() const;
 
-    /** @Returns the length in seconds of the audio file based on the number of samples and sample rate */
+    /** @returns the length in seconds of the audio file based on the number of samples and sample rate */
     double getLengthInSeconds() const;
 
     /** Prints a summary of the audio file to the console */
@@ -116,7 +116,7 @@ public:
     //=============================================================
 
     /** Set the audio buffer for this AudioFile by copying samples from another buffer.
-     * @Returns true if the buffer was copied successfully.
+     * @returns true if the buffer was copied successfully.
      */
     bool setAudioBuffer (AudioBuffer& newBuffer);
 
