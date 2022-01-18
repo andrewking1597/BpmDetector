@@ -1,0 +1,137 @@
+\hypertarget{class_bpm_detector}{}\doxysection{Bpm\+Detector Class Reference}
+\label{class_bpm_detector}\index{BpmDetector@{BpmDetector}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bpm_detector_a912f475dcd2f8f8da3dfb560a935f214}{Bpm\+Detector}} (int samples\+Per\+Block=1024, int blocks\+Per\+Window=40)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_bpm_detector_a96ff8a1ac29702d133d0f43bd3766be7}{detect\+Bpm}} (int min\+Bpm=90, int max\+Bpm=180)
+\begin{DoxyCompactList}\small\item\em Detects the BPM of some audio data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bpm_detector_ad7f3f429292f73728084b63db50dec90}{set\+Audio}} (std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&audio)
+\begin{DoxyCompactList}\small\item\em Sets the audio whose BPM will be measured. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bpm_detector_a413e604a3f4a5471753bafb55742b42e}{get\+Samples\+Per\+Block}} ()
+\item 
+int \mbox{\hyperlink{class_bpm_detector_a6b7be62b9341f6a0d05a43109c0d8c12}{get\+Blocks\+Per\+Window}} ()
+\item 
+void \mbox{\hyperlink{class_bpm_detector_a02ab4c00cc40f419eb9f953f16463ffc}{set\+Samples\+Per\+Block}} (int samples\+Per\+Block)
+\begin{DoxyCompactList}\small\item\em Sets the number of samples that make up a block. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bpm_detector_a3fbc3d8affa536b842d468a5373c53c6}{set\+Blocks\+Per\+Window}} (int blocks\+Per\+Window)
+\begin{DoxyCompactList}\small\item\em Sets the number of blocks that make up a window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bpm_detector_a912f475dcd2f8f8da3dfb560a935f214}\label{class_bpm_detector_a912f475dcd2f8f8da3dfb560a935f214}} 
+\index{BpmDetector@{BpmDetector}!BpmDetector@{BpmDetector}}
+\index{BpmDetector@{BpmDetector}!BpmDetector@{BpmDetector}}
+\doxysubsubsection{\texorpdfstring{BpmDetector()}{BpmDetector()}}
+{\footnotesize\ttfamily Bpm\+Detector\+::\+Bpm\+Detector (\begin{DoxyParamCaption}\item[{int}]{samples\+Per\+Block = {\ttfamily 1024},  }\item[{int}]{blocks\+Per\+Window = {\ttfamily 40} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em samples\+Per\+Block} & the block size to use (in samples) \\
+\hline
+{\em blocks\+Per\+Window} & the window size to use (in blocks) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bpm_detector_a96ff8a1ac29702d133d0f43bd3766be7}\label{class_bpm_detector_a96ff8a1ac29702d133d0f43bd3766be7}} 
+\index{BpmDetector@{BpmDetector}!detectBpm@{detectBpm}}
+\index{detectBpm@{detectBpm}!BpmDetector@{BpmDetector}}
+\doxysubsubsection{\texorpdfstring{detectBpm()}{detectBpm()}}
+{\footnotesize\ttfamily float Bpm\+Detector\+::detect\+Bpm (\begin{DoxyParamCaption}\item[{int}]{min\+Bpm = {\ttfamily 90},  }\item[{int}]{max\+Bpm = {\ttfamily 180} }\end{DoxyParamCaption})}
+
+
+
+Detects the BPM of some audio data. 
+
+Must first set the audio data by calling \mbox{\hyperlink{class_bpm_detector_ad7f3f429292f73728084b63db50dec90}{set\+Audio()}}. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_bpm_detector_ad7f3f429292f73728084b63db50dec90}{set\+Audio()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Bpm} & the minimum acceptable BPM value \\
+\hline
+{\em max\+Bpm} & the maximum acceptable BPM value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the detected BPM 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bpm_detector_a6b7be62b9341f6a0d05a43109c0d8c12}\label{class_bpm_detector_a6b7be62b9341f6a0d05a43109c0d8c12}} 
+\index{BpmDetector@{BpmDetector}!getBlocksPerWindow@{getBlocksPerWindow}}
+\index{getBlocksPerWindow@{getBlocksPerWindow}!BpmDetector@{BpmDetector}}
+\doxysubsubsection{\texorpdfstring{getBlocksPerWindow()}{getBlocksPerWindow()}}
+{\footnotesize\ttfamily int Bpm\+Detector\+::get\+Blocks\+Per\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the number of blocks per window 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bpm_detector_a413e604a3f4a5471753bafb55742b42e}\label{class_bpm_detector_a413e604a3f4a5471753bafb55742b42e}} 
+\index{BpmDetector@{BpmDetector}!getSamplesPerBlock@{getSamplesPerBlock}}
+\index{getSamplesPerBlock@{getSamplesPerBlock}!BpmDetector@{BpmDetector}}
+\doxysubsubsection{\texorpdfstring{getSamplesPerBlock()}{getSamplesPerBlock()}}
+{\footnotesize\ttfamily int Bpm\+Detector\+::get\+Samples\+Per\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the number of samples per block 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bpm_detector_ad7f3f429292f73728084b63db50dec90}\label{class_bpm_detector_ad7f3f429292f73728084b63db50dec90}} 
+\index{BpmDetector@{BpmDetector}!setAudio@{setAudio}}
+\index{setAudio@{setAudio}!BpmDetector@{BpmDetector}}
+\doxysubsubsection{\texorpdfstring{setAudio()}{setAudio()}}
+{\footnotesize\ttfamily void Bpm\+Detector\+::set\+Audio (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&}]{audio }\end{DoxyParamCaption})}
+
+
+
+Sets the audio whose BPM will be measured. 
+
+This MUST be called before calling \mbox{\hyperlink{class_bpm_detector_a96ff8a1ac29702d133d0f43bd3766be7}{detect\+Bpm()}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_bpm_detector_a96ff8a1ac29702d133d0f43bd3766be7}{detect\+Bpm()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em audio} & reference to the audio data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bpm_detector_a3fbc3d8affa536b842d468a5373c53c6}\label{class_bpm_detector_a3fbc3d8affa536b842d468a5373c53c6}} 
+\index{BpmDetector@{BpmDetector}!setBlocksPerWindow@{setBlocksPerWindow}}
+\index{setBlocksPerWindow@{setBlocksPerWindow}!BpmDetector@{BpmDetector}}
+\doxysubsubsection{\texorpdfstring{setBlocksPerWindow()}{setBlocksPerWindow()}}
+{\footnotesize\ttfamily void Bpm\+Detector\+::set\+Blocks\+Per\+Window (\begin{DoxyParamCaption}\item[{int}]{blocks\+Per\+Window }\end{DoxyParamCaption})}
+
+
+
+Sets the number of blocks that make up a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks\+Per\+Window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bpm_detector_a02ab4c00cc40f419eb9f953f16463ffc}\label{class_bpm_detector_a02ab4c00cc40f419eb9f953f16463ffc}} 
+\index{BpmDetector@{BpmDetector}!setSamplesPerBlock@{setSamplesPerBlock}}
+\index{setSamplesPerBlock@{setSamplesPerBlock}!BpmDetector@{BpmDetector}}
+\doxysubsubsection{\texorpdfstring{setSamplesPerBlock()}{setSamplesPerBlock()}}
+{\footnotesize\ttfamily void Bpm\+Detector\+::set\+Samples\+Per\+Block (\begin{DoxyParamCaption}\item[{int}]{samples\+Per\+Block }\end{DoxyParamCaption})}
+
+
+
+Sets the number of samples that make up a block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em samples\+Per\+Block} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{_bpm_detector_8h}{Bpm\+Detector.\+h}}\item 
+source/Bpm\+Detector.\+cpp\end{DoxyCompactItemize}

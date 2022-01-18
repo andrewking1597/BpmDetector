@@ -1,0 +1,57 @@
+\hypertarget{_bpm_detector_8h_source}{}\doxysection{Bpm\+Detector.\+h}
+\label{_bpm_detector_8h_source}\index{source/BpmDetector.h@{source/BpmDetector.h}}
+\mbox{\hyperlink{_bpm_detector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef BPMDETECTOR\_BPMDETECTOR\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define BPMDETECTOR\_BPMDETECTOR\_H}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} startSample;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} endSample;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} startBlock;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} endBlock;}
+\DoxyCodeLine{21 \} \mbox{\hyperlink{struct_window_specs}{WindowSpecs}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{class_bpm_detector}{BpmDetector}} \{}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_bpm_detector_a912f475dcd2f8f8da3dfb560a935f214}{BpmDetector}}(\textcolor{keywordtype}{int} samplesPerBlock=1024, \textcolor{keywordtype}{int} blocksPerWindow=40);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_bpm_detector_a96ff8a1ac29702d133d0f43bd3766be7}{detectBpm}}(\textcolor{keywordtype}{int} minBpm=90, \textcolor{keywordtype}{int} maxBpm=180);}
+\DoxyCodeLine{40     \textcolor{comment}{//================================================================}}
+\DoxyCodeLine{41     \textcolor{comment}{// Getters \& Setters}}
+\DoxyCodeLine{47 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bpm_detector_ad7f3f429292f73728084b63db50dec90}{setAudio}}(std::vector<std::vector<float> > \&audio);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_bpm_detector_a413e604a3f4a5471753bafb55742b42e}{getSamplesPerBlock}}();}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_bpm_detector_a6b7be62b9341f6a0d05a43109c0d8c12}{getBlocksPerWindow}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bpm_detector_a02ab4c00cc40f419eb9f953f16463ffc}{setSamplesPerBlock}}(\textcolor{keywordtype}{int} samplesPerBlock);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bpm_detector_a3fbc3d8affa536b842d468a5373c53c6}{setBlocksPerWindow}}(\textcolor{keywordtype}{int} blocksPerWindow);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keyword}{private}:}
+\DoxyCodeLine{76     \textcolor{keywordtype}{float} computeThreshold(\mbox{\hyperlink{struct_window_specs}{WindowSpecs}} w);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{float} computeAvgBlockEnergy(\mbox{\hyperlink{struct_window_specs}{WindowSpecs}} w);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{float} computeBlockEnergy(\textcolor{keywordtype}{int} blockNum);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{100     std::vector<std::vector<float> > m\_data;}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{int} m\_samplesPerBlock; }
+\DoxyCodeLine{103     \textcolor{keywordtype}{int} m\_blocksPerWindow; }
+\DoxyCodeLine{104     \textcolor{keywordtype}{int} m\_numSamples; }
+\DoxyCodeLine{110     \textcolor{keywordtype}{int} m\_samplesPerWindow;}
+\DoxyCodeLine{111 \};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//BPMDETECTOR\_BPMDETECTOR\_H}}
+
+\end{DoxyCode}

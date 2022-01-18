@@ -1,0 +1,59 @@
+\hypertarget{_audio_file_8h}{}\doxysection{source/\+Audio\+File.h File Reference}
+\label{_audio_file_8h}\index{source/AudioFile.h@{source/AudioFile.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_audio_file}{Audio\+File$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_audio_file_8h_ad18559d169602e85d0ad68da6ef8593f}\label{_audio_file_8h_ad18559d169602e85d0ad68da6ef8593f}} 
+enum class \mbox{\hyperlink{_audio_file_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}} \{ {\bfseries Error}
+, {\bfseries Not\+Loaded}
+, {\bfseries Wave}
+, {\bfseries Aiff}
+ \}
+\begin{DoxyCompactList}\small\item\em The different types of audio file, plus some other types to indicate a failure to load a file, or that one hasn\textquotesingle{}t been loaded yet. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_audio_file_8h_a24ed57f869bfefdef1bed0a033886d8e}\label{_audio_file_8h_a24ed57f869bfefdef1bed0a033886d8e}} 
+enum {\bfseries Wav\+Audio\+Format} \{ \newline
+{\bfseries PCM} = 0x0001
+, {\bfseries IEEEFloat} = 0x0003
+, {\bfseries ALaw} = 0x0006
+, {\bfseries MULaw} = 0x0007
+, \newline
+{\bfseries Extensible} = 0x\+FFFE
+ \}
+\item 
+\mbox{\Hypertarget{_audio_file_8h_a526ed66f20752002a63ee72e2e350d7d}\label{_audio_file_8h_a526ed66f20752002a63ee72e2e350d7d}} 
+enum {\bfseries AIFFAudio\+Format} \{ {\bfseries Uncompressed}
+, {\bfseries Compressed}
+, {\bfseries Error}
+, {\bfseries Error}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Adam Stark 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) 2017 Adam Stark
+\end{DoxyCopyright}
+This file is part of the \textquotesingle{}\mbox{\hyperlink{class_audio_file}{Audio\+File}}\textquotesingle{} library
+
+This program is free software\+: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\texttt{ http\+://www.\+gnu.\+org/licenses/}}. 
